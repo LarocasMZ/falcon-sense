@@ -45,7 +45,7 @@ const services = [
 
 export const ServicesSection: React.FC = () => {
   return (
-    <section id="services" className="section-padding bg-falcon-dark relative overflow-hidden">
+    <section id="capabilities" className="section-padding bg-falcon-dark relative overflow-hidden">
       {/* Circuit Background */}
       <div className="absolute inset-0 circuit-pattern opacity-10" />
       
@@ -62,7 +62,7 @@ export const ServicesSection: React.FC = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-sm font-bold text-falcon-red uppercase tracking-[0.4em] mb-4">
-              Operations & Intelligence
+              Our Capabilities
             </h2>
           </motion.div>
           <motion.h3
@@ -72,7 +72,7 @@ export const ServicesSection: React.FC = () => {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl font-black mb-8 text-falcon-white tracking-tight"
           >
-            Geospatial <span className="text-gradient-red">Capabilities</span>
+            Technical <span className="text-gradient-red">Capabilities</span>
           </motion.h3>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -81,9 +81,8 @@ export const ServicesSection: React.FC = () => {
             transition={{ delay: 0.2 }}
             className="text-xl text-falcon-gray max-w-3xl leading-relaxed"
           >
-            Falcon Sense provides survey-grade data acquisition through advanced aerial
-            platforms and remote sensing technologies. All operations are conducted by
-            licensed pilots and geomatics engineers.
+            Advanced sensing, data capture, and geospatial intelligence capabilities
+            for professional surveying and mapping operations.
           </motion.p>
         </div>
 

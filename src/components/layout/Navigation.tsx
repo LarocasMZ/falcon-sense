@@ -6,11 +6,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ArrowRight } from 'lucide-react';
 
 const navLinks = [
-  { name: 'Services', href: '#services' },
   { name: 'Capabilities', href: '#capabilities' },
-  { name: 'Technology', href: '#technology' },
-  { name: 'Industries', href: '#industries' },
   { name: 'About', href: '#about' },
+  { name: 'Contact', href: '#contact' },
 ];
 
 export const Navigation: React.FC = () => {
