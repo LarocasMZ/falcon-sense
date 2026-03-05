@@ -104,7 +104,7 @@ export const HeroSection: React.FC = () => {
             className="flex flex-col sm:flex-row gap-5 justify-center"
           >
             <Link 
-              href="#capabilities" 
+              href="/contact" 
               className="group px-8 py-4 bg-gradient-red hover:shadow-glow-red text-falcon-white font-bold rounded-lg transition-all duration-300 flex items-center justify-center gap-3 text-lg"
             >
               <Target size={20} className="group-hover:rotate-45 transition-transform" />
@@ -112,7 +112,7 @@ export const HeroSection: React.FC = () => {
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link 
-              href="#about" 
+              href="/capabilities" 
               className="px-8 py-4 bg-falcon-surface/80 hover:bg-falcon-surface text-falcon-silver border border-falcon-border hover:border-falcon-red/50 font-bold rounded-lg transition-all duration-300 flex items-center justify-center backdrop-blur-sm"
             >
               Learn More

@@ -2,13 +2,13 @@
 
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/layout/Footer';
-import HeroSection from '@/sections/HeroSection';
+import ContactSection from '@/sections/ContactSection';
 
-export default function Home() {
+export default function ContactPage() {
   return (
     <main className="relative bg-falcon-black min-h-screen">
       <Navigation />
-      <HeroSection />
+      <ContactSection />
       <Footer />
     </main>
   );

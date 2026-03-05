@@ -6,9 +6,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ArrowRight } from 'lucide-react';
 
 const navLinks = [
-  { name: 'Capabilities', href: '#capabilities' },
-  { name: 'About', href: '#about' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Capabilities', href: '/capabilities' },
+  { name: 'About', href: '/about' },
 ];
 
 export const Navigation: React.FC = () => {
@@ -57,7 +56,7 @@ export const Navigation: React.FC = () => {
               ))}
             </div>
             <Link
-              href="#contact"
+              href="/contact"
               className="px-6 py-3 bg-gradient-red hover:shadow-glow-red text-falcon-white text-sm font-bold rounded-lg transition-all duration-300"
             >
               Contact Us
@@ -98,11 +97,11 @@ export const Navigation: React.FC = () => {
                 </Link>
               ))}
               <Link
-                href="#contact"
+                href="/contact"
                 className="w-full py-4 bg-gradient-red text-falcon-white text-center font-bold rounded-xl hover:shadow-glow-red transition-all"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Get Started
+                Contact Us
               </Link>
             </div>
           </motion.div>

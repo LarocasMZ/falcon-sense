@@ -2,13 +2,13 @@
 
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/layout/Footer';
-import HeroSection from '@/sections/HeroSection';
+import ServicesSection from '@/sections/ServicesSection';
 
-export default function Home() {
+export default function CapabilitiesPage() {
   return (
     <main className="relative bg-falcon-black min-h-screen">
       <Navigation />
-      <HeroSection />
+      <ServicesSection />
       <Footer />
     </main>
   );

@@ -33,9 +33,9 @@ export const Footer: React.FC = () => {
             <h4 className="text-falcon-white font-bold mb-6 uppercase tracking-widest text-xs">Quick Links</h4>
             <ul className="space-y-3 text-sm">
               <li><Link href="/" className="text-falcon-gray hover:text-falcon-red transition-colors">Home</Link></li>
-              <li><Link href="#services" className="text-falcon-gray hover:text-falcon-red transition-colors">Services</Link></li>
-              <li><Link href="#about" className="text-falcon-gray hover:text-falcon-red transition-colors">About</Link></li>
-              <li><Link href="#contact" className="text-falcon-gray hover:text-falcon-red transition-colors">Contact</Link></li>
+              <li><Link href="/capabilities" className="text-falcon-gray hover:text-falcon-red transition-colors">Capabilities</Link></li>
+              <li><Link href="/about" className="text-falcon-gray hover:text-falcon-red transition-colors">About</Link></li>
+              <li><Link href="/contact" className="text-falcon-gray hover:text-falcon-red transition-colors">Contact</Link></li>
             </ul>
           </div>
 
