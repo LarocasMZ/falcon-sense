@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
               <img
                 src="/images/FalconLOGO.svg"
                 alt="FalconSense"
-                className="h-16 md:h-20 w-auto object-contain group-hover:opacity-80 transition-opacity"
+                className="h-24 md:h-32 w-auto object-contain group-hover:opacity-80 transition-opacity"
               />
             </Link>
             <p className="text-falcon-gray text-sm max-w-md leading-relaxed">

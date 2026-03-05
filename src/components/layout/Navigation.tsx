@@ -36,7 +36,7 @@ export const Navigation: React.FC = () => {
             <img
               src="/images/FalconLOGO.svg"
               alt="FalconSense"
-              className="h-16 md:h-20 w-auto object-contain transition-opacity group-hover:opacity-80"
+              className="h-24 md:h-32 w-auto object-contain transition-opacity group-hover:opacity-80"
               priority
             />
           </Link>
