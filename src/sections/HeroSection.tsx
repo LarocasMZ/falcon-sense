@@ -9,6 +9,7 @@ const backgroundImages = [
   '/images/drone-mine.png',
   '/images/landsat.png',
   '/images/lidar.png',
+  '/images/satimage.png',
 ];
 
 export const HeroSection: React.FC = () => {
