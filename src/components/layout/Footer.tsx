@@ -17,7 +17,7 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-6 group">
               <img
-                src="/images/falcon-logo.svg"
+                src="/images/FalconLOGO.svg"
                 alt="FalconSense"
                 className="h-10 w-auto object-contain group-hover:opacity-80 transition-opacity"
               />

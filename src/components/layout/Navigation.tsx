@@ -34,7 +34,7 @@ export const Navigation: React.FC = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <img
-              src="/images/falcon-logo.svg"
+              src="/images/FalconLOGO.svg"
               alt="FalconSense"
               className="h-10 md:h-12 w-auto object-contain transition-opacity group-hover:opacity-80"
               priority
