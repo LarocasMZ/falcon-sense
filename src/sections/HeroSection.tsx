@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, ChevronRight, MapPin, Cpu, Target, Shield } from 'lucide-react';
+import { ArrowRight, ChevronRight, Target, Cpu, Shield } from 'lucide-react';
 
 const backgroundImages = [
   '/images/drone-mine.png',
@@ -51,27 +51,6 @@ export const HeroSection: React.FC = () => {
 
       <div className="container-custom relative z-10 text-falcon-white">
         <div className="max-w-5xl">
-          {/* Professional Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="flex items-center justify-center gap-4 mb-8 flex-wrap"
-          >
-            <div className="flex items-center gap-2 px-4 py-2 bg-falcon-red/20 border border-falcon-red/50 rounded-full backdrop-blur-sm">
-              <Shield size={14} className="text-falcon-red" />
-              <span className="text-falcon-red text-xs font-bold uppercase tracking-[0.2em]">
-                Licensed & Certified
-              </span>
-            </div>
-            <div className="flex items-center gap-2 px-4 py-2 bg-falcon-surface border border-falcon-border rounded-full backdrop-blur-sm">
-              <MapPin size={14} className="text-falcon-cyan" />
-              <span className="text-falcon-silver text-xs font-bold uppercase tracking-widest">
-                Mozambique
-              </span>
-            </div>
-          </motion.div>
-
           {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}

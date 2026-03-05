@@ -15,13 +15,7 @@ export const Footer: React.FC = () => {
         <div className="grid md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-6 group">
-              <img
-                src="/images/FalconLOGO.svg"
-                alt="FalconSense"
-                className="h-24 md:h-32 w-auto object-contain group-hover:opacity-80 transition-opacity"
-              />
-            </Link>
+            <h3 className="text-2xl font-black text-falcon-white mb-4">FALCON SENSE</h3>
             <p className="text-falcon-gray text-sm max-w-md leading-relaxed">
               Professional geospatial intelligence services in Mozambique.
               Delivering precise data for your projects.
