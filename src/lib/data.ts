@@ -3,13 +3,13 @@
 import { NavItem, Capability, TechnologyLayer, Industry } from '@/types';
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'Home', href: '/' },
-  { label: 'Services', href: '#services' },
-  { label: 'Capabilities', href: '#capabilities' },
-  { label: 'Technology', href: '#technology' },
-  { label: 'Industries', href: '#industries' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/', code: 'home' },
+  { label: 'Services', href: '#services', code: 'services' },
+  { label: 'Capabilities', href: '#capabilities', code: 'capabilities' },
+  { label: 'Technology', href: '#technology', code: 'technology' },
+  { label: 'Industries', href: '#industries', code: 'industries' },
+  { label: 'About', href: '#about', code: 'about' },
+  { label: 'Contact', href: '#contact', code: 'contact' },
 ];
 
 export const CAPABILITIES: Capability[] = [
