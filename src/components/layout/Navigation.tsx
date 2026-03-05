@@ -31,18 +31,18 @@ export const Navigation: React.FC = () => {
     >
       <div className="container-custom">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo - Left */}
           <Link href="/" className="flex items-center gap-3 group">
             <img
               src="/images/FalconLOGO.svg"
               alt="FalconSense"
-              className="h-24 md:h-32 w-auto object-contain transition-opacity group-hover:opacity-80"
+              className="h-28 md:h-40 w-auto object-contain transition-opacity group-hover:opacity-80"
               priority
             />
           </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-8">
+          {/* Desktop Nav - Center */}
+          <div className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
             <div className="flex items-center gap-2">
               {navLinks.map((link) => (
                 <Link
@@ -64,7 +64,7 @@ export const Navigation: React.FC = () => {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Right */}
           <button
             className={`lg:hidden p-2 rounded-lg transition-colors ${
               isScrolled ? 'text-falcon-silver hover:text-falcon-red' : 'text-falcon-silver hover:text-falcon-red'
