@@ -1,31 +1,119 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #ff4d00;
-  --color-primary-dark: #cc3d00;
-  --color-slate-50: #f8fafc;
-  --color-slate-100: #f1f5f9;
-  --color-slate-200: #e2e8f0;
-  --color-slate-400: #94a3b8;
-  --color-slate-600: #475569;
-  --color-slate-900: #0f172a;
+  /* FalconSense Brand Colors - Tech/Futuristic Palette */
+  --color-falcon-black: #0a0a0a;
+  --color-falcon-dark: #111111;
+  --color-falcon-surface: #1a1a1a;
+  --color-falcon-border: #2a2a2a;
+  --color-falcon-gray: #888888;
+  --color-falcon-silver: #e8e8e8;
+  --color-falcon-white: #ffffff;
+  
+  /* Primary Red Glow (from logo eye/circuits) */
+  --color-falcon-red: #ff3333;
+  --color-falcon-red-dark: #cc2929;
+  --color-falcon-red-glow: #ff6666;
+  
+  /* Accent Cyan (tech feel) */
+  --color-falcon-cyan: #00d4aa;
+  --color-falcon-cyan-dark: #00aa88;
+  
+  /* Gradients */
+  --gradient-falcon: linear-gradient(135deg, #ff3333 0%, #cc2929 100%);
+  --gradient-tech: linear-gradient(135deg, #00d4aa 0%, #00aa88 100%);
+  --gradient-dark: linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
 }
 
 @theme inline {
-  --color-primary: var(--color-primary);
-  --color-slate-50: var(--color-slate-50);
-  --color-slate-100: var(--color-slate-100);
-  --color-slate-200: var(--color-slate-200);
-  --color-slate-400: var(--color-slate-400);
-  --color-slate-600: var(--color-slate-600);
-  --color-slate-900: var(--color-slate-900);
+  --color-falcon-black: var(--color-falcon-black);
+  --color-falcon-dark: var(--color-falcon-dark);
+  --color-falcon-surface: var(--color-falcon-surface);
+  --color-falcon-border: var(--color-falcon-border);
+  --color-falcon-gray: var(--color-falcon-gray);
+  --color-falcon-silver: var(--color-falcon-silver);
+  --color-falcon-white: var(--color-falcon-white);
+  --color-falcon-red: var(--color-falcon-red);
+  --color-falcon-red-dark: var(--color-falcon-red-dark);
+  --color-falcon-red-glow: var(--color-falcon-red-glow);
+  --color-falcon-cyan: var(--color-falcon-cyan);
+  --color-falcon-cyan-dark: var(--color-falcon-cyan-dark);
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 51, 51, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(255, 51, 51, 0.8), 0 0 60px rgba(255, 51, 51, 0.4);
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px rgba(255, 51, 51, 0.3), 0 0 40px rgba(255, 51, 51, 0.1);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(255, 51, 51, 0.6), 0 0 60px rgba(255, 51, 51, 0.3);
+  }
+}
+
+@keyframes circuit-pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
 }
 
 body {
-  background: white;
-  color: var(--color-slate-900);
+  background: var(--color-falcon-black);
+  color: var(--color-falcon-silver);
   font-family: 'Inter', sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background: var(--color-falcon-red);
+  color: var(--color-falcon-white);
 }
 
 .container-custom {
@@ -52,14 +140,67 @@ body {
 
 /* Custom Utilities */
 .glass-nav {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(10, 10, 10, 0.8);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(42, 42, 42, 0.5);
 }
 
 .bg-dark-nav {
-  background: rgba(15, 23, 42, 0.9);
+  background: rgba(10, 10, 10, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+}
+
+/* FalconSense Brand Effects */
+.text-gradient-red {
+  background: linear-gradient(135deg, #ff3333 0%, #ff6666 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #00d4aa 0%, #00ffcc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient-red {
+  background: linear-gradient(135deg, #ff3333 0%, #cc2929 100%);
+}
+
+.bg-gradient-cyan {
+  background: linear-gradient(135deg, #00d4aa 0%, #00aa88 100%);
+}
+
+/* Circuit pattern effect */
+.circuit-pattern {
+  background-image: 
+    linear-gradient(rgba(255, 51, 51, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 51, 51, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Glow effects */
+.glow-red {
+  box-shadow: 0 0 20px rgba(255, 51, 51, 0.5), 0 0 40px rgba(255, 51, 51, 0.3);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 212, 170, 0.5), 0 0 40px rgba(0, 212, 170, 0.3);
+}
+
+/* Card styles */
+.card-falcon {
+  background: linear-gradient(145deg, #1a1a1a 0%, #111111 100%);
+  border: 1px solid #2a2a2a;
+  transition: all 0.3s ease;
+}
+
+.card-falcon:hover {
+  border-color: #ff3333;
+  box-shadow: 0 0 30px rgba(255, 51, 51, 0.2);
+  transform: translateY(-4px);
 }
