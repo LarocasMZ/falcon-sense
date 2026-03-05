@@ -204,3 +204,14 @@ html {
   box-shadow: 0 0 30px rgba(255, 51, 51, 0.2);
   transform: translateY(-4px);
 }
+
+/* Hide AI watermarks/extensions */
+.gemini-logo,
+[data-testid="gemini-watermark"],
+.ai-watermark,
+#gemini-extension,
+.gemini-extension {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
