@@ -49,23 +49,6 @@ export const HeroSection: React.FC = () => {
 
       <div className="container-custom relative z-10 text-falcon-white">
         <div className="max-w-5xl">
-          {/* Logo Center Display */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="flex justify-center mb-12"
-          >
-            <div className="relative">
-              <div className="absolute inset-0 bg-falcon-red/20 blur-3xl rounded-full" />
-              <img 
-                src="/images/falcon-icon.svg" 
-                alt="FalconSense"
-                className="h-24 md:h-32 w-auto object-contain relative z-10 drop-shadow-2xl"
-              />
-            </div>
-          </motion.div>
-
           {/* Professional Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
