@@ -47,8 +47,8 @@ export const AboutSection: React.FC = () => {
                 'Custom Analytics',
                 'Multi-Sector Support'
               ].map((item, i) => (
-                <motion.div 
-                  key={i} 
+                <motion.div
+                  key={i}
                   className="flex items-center gap-3"
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -57,7 +57,7 @@ export const AboutSection: React.FC = () => {
                 >
                   <CheckCircle2 className="text-falcon-red w-5 h-5 shrink-0" />
                   <span className="font-bold text-falcon-silver">{item}</span>
-                </div>
+                </motion.div>
               ))}
             </div>
           </motion.div>
