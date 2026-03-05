@@ -2,62 +2,66 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-surface border-t border-white/5">
-      <div className="container-custom py-16">
+    <footer className="bg-falcon-dark border-t border-falcon-border relative overflow-hidden">
+      {/* Circuit Background */}
+      <div className="absolute inset-0 circuit-pattern opacity-5" />
+      
+      <div className="container-custom py-16 relative z-10">
         <div className="grid md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-6 group">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                <span className="text-white font-bold text-xl">F</span>
-              </div>
-              <div>
-                <h3 className="font-semibold text-white text-lg">FALCON SENSE</h3>
-                <p className="text-xs text-text-muted -mt-0.5">See the Unseen. Know the Unknown.</p>
-              </div>
+              <Image
+                src="/images/FalconSenseLOGO.png"
+                alt="FalconSense"
+                width={150}
+                height={40}
+                className="h-10 w-auto object-contain group-hover:opacity-80 transition-opacity"
+              />
             </Link>
-            <p className="text-text-muted text-sm max-w-md leading-relaxed">
-              Professional geospatial intelligence services in Mozambique. 
+            <p className="text-falcon-gray text-sm max-w-md leading-relaxed">
+              Professional geospatial intelligence services in Mozambique.
               Delivering precise data for your projects.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-medium mb-6">Quick Links</h4>
+            <h4 className="text-falcon-white font-bold mb-6 uppercase tracking-widest text-xs">Quick Links</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/" className="text-text-muted hover:text-primary transition-colors">Home</Link></li>
-              <li><Link href="#services" className="text-text-muted hover:text-primary transition-colors">Services</Link></li>
-              <li><Link href="#about" className="text-text-muted hover:text-primary transition-colors">About</Link></li>
-              <li><Link href="#contact" className="text-text-muted hover:text-primary transition-colors">Contact</Link></li>
+              <li><Link href="/" className="text-falcon-gray hover:text-falcon-red transition-colors">Home</Link></li>
+              <li><Link href="#services" className="text-falcon-gray hover:text-falcon-red transition-colors">Services</Link></li>
+              <li><Link href="#about" className="text-falcon-gray hover:text-falcon-red transition-colors">About</Link></li>
+              <li><Link href="#contact" className="text-falcon-gray hover:text-falcon-red transition-colors">Contact</Link></li>
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="text-white font-medium mb-6">Services</h4>
+            <h4 className="text-falcon-white font-bold mb-6 uppercase tracking-widest text-xs">Services</h4>
             <ul className="space-y-3 text-sm">
-              <li className="text-text-muted">Aerial Surveying</li>
-              <li className="text-text-muted">LiDAR Scanning</li>
-              <li className="text-text-muted">GIS Analysis</li>
-              <li className="text-text-muted">3D Modeling</li>
+              <li className="text-falcon-gray">Aerial Surveying</li>
+              <li className="text-falcon-gray">LiDAR Scanning</li>
+              <li className="text-falcon-gray">GIS Analysis</li>
+              <li className="text-falcon-gray">3D Modeling</li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-text-muted text-sm">
+        <div className="mt-16 pt-8 border-t border-falcon-border flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-falcon-gray text-sm">
             © {currentYear} FALCON SENSE. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-text-muted hover:text-primary transition-colors text-sm">Privacy Policy</a>
-            <a href="#" className="text-text-muted hover:text-primary transition-colors text-sm">Terms of Service</a>
+            <a href="#" className="text-falcon-gray hover:text-falcon-red transition-colors text-sm">Privacy Policy</a>
+            <a href="#" className="text-falcon-gray hover:text-falcon-red transition-colors text-sm">Terms of Service</a>
           </div>
         </div>
       </div>

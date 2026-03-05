@@ -2,36 +2,69 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { INDUSTRIES } from '@/lib/data';
 import { Pickaxe, Wheat, Building2, Trees, ArrowRight } from 'lucide-react';
 
-const iconMap = {
+const INDUSTRIES = [
+  { id: 'mining', name: 'Mining', icon: 'pickaxe', predatorFocus: 'Stockpile volume, pit mapping', activeHunts: '12' },
+  { id: 'agriculture', name: 'Agriculture', icon: 'crop', predatorFocus: 'Precision farming, yield health', activeHunts: '25' },
+  { id: 'infrastructure', name: 'Infrastructure', icon: 'building', predatorFocus: 'Asset inspection, road mapping', activeHunts: '18' },
+  { id: 'environment', name: 'Environment', icon: 'tree', predatorFocus: 'Conservation, land monitoring', activeHunts: '8' },
+];
+
+const iconMap: Record<string, React.ReactNode> = {
   pickaxe: <Pickaxe size={24} />,
   crop: <Wheat size={24} />,
   building: <Building2 size={24} />,
   tree: <Trees size={24} />,
 };
 
-const industryImages = {
-  mining: "https://images.unsplash.com/photo-1578319439584-104c94d37305?auto=format&fit=crop&q=80&w=1200", // Engineering perspective of large open pit mine
-  agriculture: "https://images.unsplash.com/photo-1628352081506-83c43123ed6d?auto=format&fit=crop&q=80&w=1200", // Multispectral/NDVI style agricultural terrain view
-  infrastructure: "https://images.unsplash.com/photo-1590487988256-9ed24133863e?auto=format&fit=crop&q=80&w=1200", // Industrial inspection of bridge/concrete structure
-  environment: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=1200", // Technical aerial view of mangrove/ecological system
+const industryImages: Record<string, string> = {
+  mining: '/images/drone-mine.png',
+  agriculture: '/images/landsat.png',
+  infrastructure: '/images/lidar.png',
+  environment: '/images/drone-mine.png',
 };
 
 export const IndustriesSection: React.FC = () => {
   return (
-    <section id="industries" className="section-padding bg-slate-100">
-      <div className="container-custom">
+    <section id="industries" className="section-padding bg-falcon-dark relative overflow-hidden">
+      {/* Circuit Background */}
+      <div className="absolute inset-0 circuit-pattern opacity-10" />
+      
+      {/* Glow Effects */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-falcon-red/10 blur-3xl rounded-full" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-falcon-cyan/10 blur-3xl rounded-full" />
+
+      <div className="container-custom relative z-10">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
           <div className="max-w-3xl">
-            <h2 className="text-sm font-bold text-slate-400 uppercase tracking-[0.4em] mb-4">Industrial Deployment</h2>
-            <h3 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">Sector Solutions</h3>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-sm font-bold text-falcon-gray uppercase tracking-[0.4em] mb-4">Industrial Deployment</h2>
+            </motion.div>
+            <motion.h3
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-5xl font-black tracking-tight text-falcon-white"
+            >
+              Sector <span className="text-gradient-cyan">Solutions</span>
+            </motion.h3>
           </div>
-          <p className="text-lg text-slate-500 max-w-sm leading-relaxed font-medium">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="text-lg text-falcon-gray max-w-sm leading-relaxed"
+          >
             Systematic data acquisition tailored for Mozambique's high-value industrial sectors.
-          </p>
+          </motion.p>
         </div>
 
         {/* Industries Grid */}
@@ -39,44 +72,44 @@ export const IndustriesSection: React.FC = () => {
           {INDUSTRIES.map((industry, i) => (
             <motion.div
               key={industry.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group relative h-[450px] rounded-2xl overflow-hidden cursor-pointer shadow-lg"
+              className="group relative h-[450px] rounded-2xl overflow-hidden cursor-pointer border border-falcon-border"
             >
               {/* Background Image */}
               <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105">
-                <img 
-                  src={industryImages[industry.id as keyof typeof industryImages]} 
+                <img
+                  src={industryImages[industry.id]}
                   alt={industry.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
-                <div className="absolute inset-0 bg-slate-900/40 group-hover:bg-slate-900/20 transition-all duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-b from-falcon-black/60 via-falcon-black/40 to-falcon-black/90" />
               </div>
 
               {/* Content */}
-              <div className="absolute inset-0 p-10 flex flex-col justify-end text-white">
+              <div className="absolute inset-0 p-10 flex flex-col justify-end">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-primary/90 text-white rounded-lg flex items-center justify-center">
-                    {iconMap[industry.icon as keyof typeof iconMap] || <Building2 size={24} />}
+                  <div className="w-12 h-12 bg-falcon-red/90 text-falcon-white rounded-lg flex items-center justify-center group-hover:shadow-glow-red transition-all duration-300">
+                    {iconMap[industry.id] || <Building2 size={24} />}
                   </div>
-                  <h4 className="text-2xl font-bold tracking-tight">{industry.name}</h4>
+                  <h4 className="text-2xl font-black text-falcon-white tracking-tight">{industry.name}</h4>
                 </div>
-                
-                <p className="text-white/90 text-sm mb-6 max-w-md opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 leading-relaxed">
+
+                <p className="text-falcon-gray text-sm mb-6 max-w-md opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 leading-relaxed">
                   {industry.predatorFocus}
                 </p>
 
-                <div className="flex items-center gap-2 text-primary font-bold uppercase tracking-widest text-xs">
-                  Case Study <ArrowRight size={14} />
+                <div className="flex items-center gap-2 text-falcon-red font-bold uppercase tracking-widest text-xs">
+                  Case Study <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
                 </div>
               </div>
 
               {/* Status Indicator */}
-              <div className="absolute top-6 right-6 px-4 py-1 bg-slate-900/60 backdrop-blur-md border border-white/20 rounded-md">
-                <span className="text-[10px] font-bold text-white uppercase tracking-widest">
-                  Active Operation: {industry.activeHunts}
+              <div className="absolute top-6 right-6 px-4 py-2 bg-falcon-surface/80 backdrop-blur border border-falcon-border rounded-md">
+                <span className="text-[10px] font-bold text-falcon-gray uppercase tracking-widest">
+                  Active: {industry.activeHunts}
                 </span>
               </div>
             </motion.div>
