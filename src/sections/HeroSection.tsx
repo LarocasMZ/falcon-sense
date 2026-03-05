@@ -43,8 +43,8 @@ export const HeroSection: React.FC = () => {
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${backgroundImages[currentImageIndex]})` }}
           >
-            {/* Dark overlay with red tint */}
-            <div className="absolute inset-0 bg-gradient-to-b from-falcon-black/70 via-falcon-black/50 to-falcon-black/90" />
+            {/* Dark overlay with red tint - lighter for clearer images */}
+            <div className="absolute inset-0 bg-gradient-to-b from-falcon-black/40 via-falcon-black/20 to-falcon-black/50" />
           </motion.div>
         </AnimatePresence>
       </div>
