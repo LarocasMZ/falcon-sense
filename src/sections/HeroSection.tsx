@@ -59,9 +59,9 @@ export const HeroSection: React.FC = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-falcon-red/20 blur-3xl rounded-full" />
               <img 
-                src="/images/FalconSenseLOGO.png" 
+                src="/images/falcon-icon.svg" 
                 alt="FalconSense"
-                className="h-32 md:h-40 w-auto object-contain relative z-10 drop-shadow-2xl"
+                className="h-24 md:h-32 w-auto object-contain relative z-10 drop-shadow-2xl"
               />
             </div>
           </motion.div>

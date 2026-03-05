@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -17,11 +16,9 @@ export const Footer: React.FC = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <Link href="/" className="flex items-center gap-3 mb-6 group">
-              <Image
-                src="/images/FalconSenseLOGO.png"
+              <img
+                src="/images/falcon-logo.svg"
                 alt="FalconSense"
-                width={150}
-                height={40}
                 className="h-10 w-auto object-contain group-hover:opacity-80 transition-opacity"
               />
             </Link>

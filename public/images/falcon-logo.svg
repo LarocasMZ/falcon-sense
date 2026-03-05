@@ -1,0 +1,102 @@
+<svg viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Red Glow Gradient -->
+    <linearGradient id="redGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff3333;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#cc2929;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Falcon Body Gradient -->
+    <linearGradient id="falconDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a2a2a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Falcon Light Gradient -->
+    <linearGradient id="falconLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e8e8e8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow Filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Falcon Head Icon -->
+  <g transform="translate(0, -10)">
+    <!-- Back feathers (dark) -->
+    <path d="M 45 25 Q 35 35 38 50 Q 42 65 55 70 Q 60 72 65 70" 
+          fill="url(#falconDark)" stroke="#3a3a3a" stroke-width="1.5"/>
+    
+    <!-- Circuit lines (red glow) -->
+    <g stroke="url(#redGlow)" stroke-width="2" fill="none" filter="url(#glow)" opacity="0.9">
+      <path d="M 40 30 L 50 30 L 55 28"/>
+      <path d="M 38 35 L 52 35 L 58 33"/>
+      <path d="M 42 40 L 54 40 L 60 38"/>
+      <!-- Circuit dots -->
+      <circle cx="50" cy="30" r="2" fill="#ff3333"/>
+      <circle cx="52" cy="35" r="2" fill="#ff3333"/>
+      <circle cx="54" cy="40" r="2" fill="#ff3333"/>
+      <circle cx="55" cy="28" r="1.5" fill="#ff3333"/>
+      <circle cx="58" cy="33" r="1.5" fill="#ff3333"/>
+      <circle cx="60" cy="38" r="1.5" fill="#ff3333"/>
+    </g>
+    
+    <!-- Main head shape -->
+    <path d="M 50 20 Q 60 15 70 20 Q 80 25 82 35 Q 85 45 80 55 Q 75 65 65 68 Q 55 70 50 65" 
+          fill="url(#falconDark)" stroke="#4a4a4a" stroke-width="1"/>
+    
+    <!-- White chest/neck -->
+    <path d="M 55 50 Q 60 55 65 58 Q 70 60 72 65 Q 70 70 65 72 Q 58 70 52 65 Q 48 58 50 52" 
+          fill="url(#falconLight)"/>
+    
+    <!-- Beak -->
+    <path d="M 80 35 L 90 40 L 82 45 Z" fill="#5a6a7a" stroke="#3a4a5a" stroke-width="0.5"/>
+    
+    <!-- Red glowing eye -->
+    <circle cx="68" cy="32" r="5" fill="#ff3333" filter="url(#glow)"/>
+    <circle cx="68" cy="32" r="2.5" fill="#ffffff"/>
+    <circle cx="69" cy="31" r="1" fill="#ffffff"/>
+    
+    <!-- Eye glow ring -->
+    <circle cx="68" cy="32" r="7" fill="none" stroke="#ff3333" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Wing/chest circuit pattern -->
+    <g stroke="url(#redGlow)" stroke-width="1.5" fill="none" opacity="0.8">
+      <path d="M 58 55 L 62 60 L 65 58"/>
+      <path d="M 55 60 L 60 66 L 63 64"/>
+      <circle cx="62" cy="60" r="1.5" fill="#ff3333"/>
+      <circle cx="60" cy="66" r="1.5" fill="#ff3333"/>
+      <circle cx="65" cy="58" r="1.5" fill="#ff3333"/>
+    </g>
+  </g>
+  
+  <!-- Text: FALCON -->
+  <text x="110" y="65" 
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+        font-size="42" 
+        font-weight="900" 
+        fill="#e8e8e8" 
+        letter-spacing="4">FALCON</text>
+  
+  <!-- Red line through O -->
+  <line x1="235" y1="52" x2="265" y2="52" 
+        stroke="url(#redGlow)" stroke-width="2" filter="url(#glow)"/>
+  
+  <!-- Text: SENSE -->
+  <text x="110" y="95" 
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+        font-size="18" 
+        font-weight="700" 
+        fill="#888888" 
+        letter-spacing="8">SENSE</text>
+  
+  <!-- Bottom red glow -->
+  <ellipse cx="180" cy="105" rx="60" ry="8" fill="#ff3333" opacity="0.2" filter="url(#glow)"/>
+</svg>

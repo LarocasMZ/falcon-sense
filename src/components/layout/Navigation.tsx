@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ArrowRight } from 'lucide-react';
-import Image from 'next/image';
 
 const navLinks = [
   { name: 'Services', href: '#services' },
@@ -36,12 +35,10 @@ export const Navigation: React.FC = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <Image
-              src="/images/FalconSenseLOGO.png"
+            <img
+              src="/images/falcon-logo.svg"
               alt="FalconSense"
-              width={180}
-              height={50}
-              className="h-10 w-auto object-contain"
+              className="h-10 md:h-12 w-auto object-contain transition-opacity group-hover:opacity-80"
               priority
             />
           </Link>
